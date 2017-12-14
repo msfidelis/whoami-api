@@ -10,10 +10,39 @@ const express = require('express');
 const path = require('path');
 const r2 = require('r2');
 
-const public_ip = r2.get(APP_PUBLIC_IP_ENDPOINT).text;
-const local_ip = r2.get(APP_PUBLIC_IP_ENDPOINT).text;
-const hostname = r2.get(APP_HOSTNAME_ENDPOINT).text;
-const zone = r2.get(APP_ZONE_ENDPOINT).text;
+let public_ip;
+let local_ip;
+let hostname;
+let zone;
+
+
+// Find Public IP
+r2.get(APP_PUBLIC_IP_ENDPOINT)
+    .text
+    .then(response => {
+        public_ip = response
+    })
+
+// Find Local IP
+r2.get(APP_LOCAL_IP_ENDPOINT)
+    .text
+    .then(response => {
+        local_ip = response
+    })
+
+// Find Hostname
+r2.get(APP_HOSTNAME_ENDPOINT)
+    .text
+    .then(response => {
+        hostname = response
+    })
+
+// Find Zone 
+r2.get(APP_ZONE_ENDPOINT)
+    .text
+    .then(response => {
+        zone = response
+    })
 
 const app = express();
 
