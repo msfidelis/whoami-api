@@ -63,4 +63,4 @@ app.get('/healthcheck', (req, res) => {
     res.json({ status: 200 });
 });
 
-app.listen(8080);
+app.listen(80);
