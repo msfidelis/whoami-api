@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Whoami API</title>
+
+    <meta name="description" content="Whoami Server">
+    <meta name="author" content="Matheus Fidelis">
+
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <link rel="stylesheet" type="text/css" href="static/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+
+    <div class="card">
+        <img src="static/aws.ico" alt="aws" style="width:100%">
+        <h1>{{ public_ip }}</h1>
+        <h1>{{ local_ip }}</h1>
+        <p class="title">Hostname: {{ hostname }}</p>
+        <p class="title">Availability Zone: {{ zone }}</p>
+        <a href="https://twitter.com/fidelissauro"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/msfidelis/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/msfidelis"><i class="fa fa-github"></i></a>
+
+    </div>
+</body>
+
+</html>
