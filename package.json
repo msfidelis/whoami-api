@@ -1,0 +1,28 @@
+{
+    "name": "whoami-api",
+    "version": "1.0.0",
+    "description": "Simple API to show AWS infos ",
+    "main": "index.js",
+    "scripts": {
+        "start": "pm2 start index.js",
+        "stop": "pm2 stop all",
+        "monit": "pm2 monit",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/msfidelis/whoami-api.git"
+    },
+    "author": "Matheus Fidelis",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/msfidelis/whoami-api/issues"
+    },
+    "homepage": "https://github.com/msfidelis/whoami-api#readme",
+    "dependencies": {
+        "express": "^4.16.2",
+        "express-handlebars": "^3.0.0",
+        "pm2": "^2.9.0",
+        "r2": "^2.0.0"
+    }
+}
