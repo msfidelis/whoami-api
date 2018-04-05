@@ -53,10 +53,10 @@ app.get('/', (req, res) => {
         public_ip: public_ip,
         local_ip: local_ip,
         hostname: os.hostname(),
-		os: os.type(),
-		release: os.release(),
-		arch: os.arch(),
-		uptime: os.uptime()
+	os: os.type(),
+	release: os.release(),
+	arch: os.arch(),
+	uptime: os.uptime()
     };
 
     res.render('home', data);
@@ -73,10 +73,10 @@ app.get('/whoami', (req, res) => {
         public_ip: public_ip,
         local_ip: local_ip,
         hostname: os.hostname(),
-		os: os.type(),
-		release: os.release(),
-		arch: os.arch(),
-		uptime: os.uptime()
+	os: os.type(),
+	release: os.release(),
+	arch: os.arch(),
+	uptime: os.uptime()
     };
 
     res.json(data);
@@ -87,8 +87,6 @@ app.get('/whoami', (req, res) => {
 /**
  * Healthcheck Endpoint
  */
-app.get('/healthcheck', (req, res) => {
-    res.json({ status: 200 });
-});
+app.get('/healthcheck', (req, res) => res.json({ status: 200 }));
 
 app.listen(80);
