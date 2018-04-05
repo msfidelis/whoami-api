@@ -1,14 +1,14 @@
 'use strict';
 
 const APP_PUBLIC_IP_ENDPOINT	= "http://169.254.169.254/latest/meta-data/public-ipv4";
-const APP_LOCAL_IP_ENDPOINT		= "http://169.254.169.254/latest/meta-data/local-ipv4";
-const APP_ZONE_ENDPOINT			= "http://169.254.169.254/latest/meta-data/placement/availability-zone";
+const APP_LOCAL_IP_ENDPOINT	= "http://169.254.169.254/latest/meta-data/local-ipv4";
+const APP_ZONE_ENDPOINT		= "http://169.254.169.254/latest/meta-data/placement/availability-zone";
 
 const exphbs	= require('express-handlebars');
 const express	= require('express');
-const path		= require('path');
-const r2		= require('r2');
-const os		= require('os');
+const path	= require('path');
+const r2	= require('r2');
+const os	= require('os');
 
 const public_ip;
 const local_ip;
