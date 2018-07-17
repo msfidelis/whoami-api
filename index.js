@@ -10,9 +10,9 @@ const path	= require('path');
 const r2	= require('r2');
 const os	= require('os');
 
-const public_ip;
-const local_ip;
-const zone;
+let public_ip;
+let local_ip;
+let zone;
 
 // Find Public IP
 r2.get(APP_PUBLIC_IP_ENDPOINT)
@@ -89,4 +89,4 @@ app.get('/whoami', (req, res) => {
  */
 app.get('/healthcheck', (req, res) => res.json({ status: 200 }));
 
-app.listen(80);
+app.listen(8080);
